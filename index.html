@@ -944,6 +944,7 @@
       </div>
 <!-- === YAHAN SE COPY KAREIN === -->
 <!-- === YAHAN SE COPY KAREIN === -->
+<!-- === YAHAN SE COPY KAREIN === -->
 <form onsubmit="sendToWhatsApp(event)">
     
     <div class="form-row">
@@ -972,6 +973,39 @@
     
     <button type="submit" class="btn btn-primary" style="justify-self:start;">Send Enquiry via WhatsApp →</button>
 </form>
+
+<script>
+function sendToWhatsApp(event) {
+    event.preventDefault();
+    
+    var myWhatsAppNumber = "919720595313"; 
+
+    var name = document.getElementById('fullName').value;
+    var company = document.getElementById('companyName').value || "Not Provided";
+    var email = document.getElementById('emailAddress').value;
+    var phone = document.getElementById('phoneNumber').value || "Not Provided";
+    var product = document.getElementById('productInterest').value;
+    var port = document.getElementById('destinationPort').value || "Not Provided";
+    var qty = document.getElementById('approxQuantity').value || "Not Provided";
+    var details = document.getElementById('reqDetails').value || "Not Provided";
+
+    var message = "*New Website Enquiry - Bioacorns Global*%0A%0A" +
+                  "*Name:* " + name + "%0A" +
+                  "*Company:* " + company + "%0A" +
+                  "*Email:* " + email + "%0A" +
+                  "*Phone:* " + phone + "%0A" +
+                  "*Product:* " + product + "%0A" +
+                  "*Port/Country:* " + port + "%0A" +
+                  "*Quantity:* " + qty + "%0A" +
+                  "*Details:* " + details;
+
+    // Mobile ke liye window.location.href sabse best aur fast kaam karta hai
+    var whatsappURL = "https://whatsapp.com" + myWhatsAppNumber + "&text=" + message;
+    window.location.href = whatsappURL;
+}
+</script>
+<!-- === YAHAN TAK COPY KAREIN === -->
+
 
 <!-- Yeh script form ka data aapke WhatsApp par bhejega -->
 <script>
