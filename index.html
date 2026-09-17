@@ -943,43 +943,69 @@
         </div>
       </div>
 <!-- === YAHAN SE COPY KAREIN === -->
-<form action="https://api.web3forms.com/submit" method="POST">
+<!-- === YAHAN SE COPY KAREIN === -->
+<form onsubmit="sendToWhatsApp(event)">
     
-    <!-- Aapki Web3Forms ki Key -->
-    <input type="hidden" name="access_key" value="5e5e481e-6cad-4611-b743-f9ba47cfa3ab1">
-
-    <!-- Email ka subject line -->
-    <input type="hidden" name="subject" value="New Website Enquiry - Bioacorns Global">
-
-    <!-- Success hone ke baad kahan redirect karna hai -->
-    <input type="hidden" name="redirect" value="https://web3forms.com/success">
-
     <div class="form-row">
-      <input type="text" name="Full Name" placeholder="Full name" required>
-      <input type="text" name="Company Name" placeholder="Company name">
+      <input type="text" id="fullName" placeholder="Full name" required>
+      <input type="text" id="companyName" placeholder="Company name">
     </div>
     
     <div class="form-row">
-      <input type="email" name="Email Address" placeholder="Email address" required>
-      <input type="tel" name="Phone Number" placeholder="Phone / WhatsApp number">
+      <input type="email" id="emailAddress" placeholder="Email address" required>
+      <input type="tel" id="phoneNumber" placeholder="Phone / WhatsApp number">
     </div>
     
     <div class="form-row">
-      <select name="Product of Interest" required>
+      <select id="productInterest" required>
         <option value="" disabled selected>Product of interest</option>
-        <option>Jaggery Cubes</option>
-        <option>Jaggery Powder</option>
-        <option>Mustard Oil</option>
-        <option>Multiple Products</option>
+        <option value="Jaggery Cubes">Jaggery Cubes</option>
+        <option value="Jaggery Powder">Jaggery Powder</option>
+        <option value="Mustard Oil">Mustard Oil</option>
+        <option value="Multiple Products">Multiple Products</option>
       </select>
-      <input type="text" name="Destination Port" placeholder="Country / destination port">
+      <input type="text" id="destinationPort" placeholder="Country / destination port">
     </div>
     
-    <input type="text" name="Approximate Quantity" placeholder="Approximate quantity (e.g. 500 kg / month, 1 container)">
-    <textarea name="Requirement Details" placeholder="Tell us more about your requirement..."></textarea>
+    <input type="text" id="approxQuantity" placeholder="Approximate quantity (e.g. 500 kg / month, 1 container)">
+    <textarea id="reqDetails" placeholder="Tell us more about your requirement..."></textarea>
     
-    <button type="submit" class="btn btn-primary" style="justify-self:start;">Send Enquiry →</button>
+    <button type="submit" class="btn btn-primary" style="justify-self:start;">Send Enquiry via WhatsApp →</button>
 </form>
+
+<!-- Yeh script form ka data aapke WhatsApp par bhejega -->
+<script>
+function sendToWhatsApp(event) {
+    event.preventDefault();
+    
+    // Aapka set kiya hua WhatsApp number
+    var myWhatsAppNumber = "919720595313"; 
+
+    var name = document.getElementById('fullName').value;
+    var company = document.getElementById('companyName').value || "Not Provided";
+    var email = document.getElementById('emailAddress').value;
+    var phone = document.getElementById('phoneNumber').value || "Not Provided";
+    var product = document.getElementById('productInterest').value;
+    var port = document.getElementById('destinationPort').value || "Not Provided";
+    var qty = document.getElementById('approxQuantity').value || "Not Provided";
+    var details = document.getElementById('reqDetails').value || "Not Provided";
+
+    var message = "*New Website Enquiry - Bioacorns Global*%0A%0A" +
+                  "*Name:* " + name + "%0A" +
+                  "*Company:* " + company + "%0A" +
+                  "*Email:* " + email + "%0A" +
+                  "*Phone:* " + phone + "%0A" +
+                  "*Product:* " + product + "%0A" +
+                  "*Port/Country:* " + port + "%0A" +
+                  "*Quantity:* " + qty + "%0A" +
+                  "*Details:* " + details;
+
+    var whatsappURL = "https://whatsapp.com" + myWhatsAppNumber + "&text=" + message;
+    window.open(whatsappURL, '_blank');
+}
+</script>
+<!-- === YAHAN TAK COPY KAREIN === -->
+
     </div>
   </div>
 </section>
