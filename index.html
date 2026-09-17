@@ -942,30 +942,43 @@
           <div><h5>Response Time</h5><p>Quotes typically shared within 24–48 hours, including export enquiries</p></div>
         </div>
       </div>
-      <form onsubmit="event.preventDefault(); alert('This form is a design placeholder — connect it to your email or CRM to go live.');">
-        <div class="form-row">
-          <input type="text" placeholder="Full name" required>
-          <input type="text" placeholder="Company name">
-        </div>
-        <div class="form-row">
-          <input type="email" placeholder="Email address" required>
-          <input type="tel" placeholder="Phone / WhatsApp number">
-        </div>
-        <div class="form-row">
-          <select required>
-            <option value="" disabled selected>Product of interest</option>
-            <option>Jaggery Cubes</option>
-            <option>Jaggery Powder</option>
-            <option>Mustard Oil</option>
-            <option>Multiple Products</option>
-          </select>
-          <input type="text" placeholder="Country / destination port">
-        </div>
-        <input type="text" placeholder="Approximate quantity (e.g. 500 kg / month, 1 container)">
-        <textarea placeholder="Tell us more about your requirement..."></textarea>
-        <button type="submit" class="btn btn-primary" style="justify-self:start;">Send Enquiry →</button>
-        <p class="form-note">This form is a static placeholder — wire it up to email, WhatsApp, or a CRM before publishing.</p>
-      </form>
+<!-- === YAHAN SE COPY KAREIN === -->
+<form action="https://web3forms.com" method="POST">
+    
+    <!-- Aapki Web3Forms ki Key -->
+    <input type="hidden" name="access_key" value="c813809a-4efd-4f25-8205-8006fb688451">
+
+    <!-- Email ka subject line jo aapko inbox me dikhega -->
+    <input type="hidden" name="subject" value="New Website Enquiry - Bioacorns Global">
+
+    <div class="form-row">
+      <input type="text" name="Full Name" placeholder="Full name" required>
+      <input type="text" name="Company Name" placeholder="Company name">
+    </div>
+    
+    <div class="form-row">
+      <input type="email" name="Email Address" placeholder="Email address" required>
+      <input type="tel" name="Phone Number" placeholder="Phone / WhatsApp number">
+    </div>
+    
+    <div class="form-row">
+      <select name="Product of Interest" required>
+        <option value="" disabled selected>Product of interest</option>
+        <option>Jaggery Cubes</option>
+        <option>Jaggery Powder</option>
+        <option>Mustard Oil</option>
+        <option>Multiple Products</option>
+      </select>
+      <input type="text" name="Destination Port" placeholder="Country / destination port">
+    </div>
+    
+    <input type="text" name="Approximate Quantity" placeholder="Approximate quantity (e.g. 500 kg / month, 1 container)">
+    <textarea name="Requirement Details" placeholder="Tell us more about your requirement..."></textarea>
+    
+    <button type="submit" class="btn btn-primary" style="justify-self:start;">Send Enquiry →</button>
+</form>
+<!-- === YAHAN TAK COPY KAREIN === -->
+
     </div>
   </div>
 </section>
