@@ -942,37 +942,44 @@
           <div><h5>Response Time</h5><p>Quotes typically shared within 24–48 hours, including export enquiries</p></div>
         </div>
       </div>
-<!-- === YAHAN SE COPY KAREIN === -->
-<!-- === YAHAN SE COPY KAREIN === -->
-<!-- === YAHAN SE COPY KAREIN === -->
-<form onsubmit="sendToWhatsApp(event)">
+<form action="https://web3forms.com" method="POST">
     
+    <!-- ⚠️ YAHAN APNI NAYI ACCESS KEY PASTE KAREIN -->
+    <input type="hidden" name="access_key" value="3518ac79-fd0f-4f3a-aae5-9ddf9f1e8ab1">
+
+    <!-- Email ka subject line -->
+    <input type="hidden" name="subject" value="New Website Enquiry - Bioacorns Global">
+
+    <!-- Success hone ke baad kahan redirect karna hai -->
+    <input type="hidden" name="redirect" value="https://web3forms.com">
+
     <div class="form-row">
-      <input type="text" id="fullName" placeholder="Full name" required>
-      <input type="text" id="companyName" placeholder="Company name">
+      <input type="text" name="Full Name" placeholder="Full name" required>
+      <input type="text" name="Company Name" placeholder="Company name">
     </div>
     
     <div class="form-row">
-      <input type="email" id="emailAddress" placeholder="Email address" required>
-      <input type="tel" id="phoneNumber" placeholder="Phone / WhatsApp number">
+      <input type="email" name="Email Address" placeholder="Email address" required>
+      <input type="tel" name="Phone Number" placeholder="Phone / WhatsApp number">
     </div>
     
     <div class="form-row">
-      <select id="productInterest" required>
+      <select name="Product of Interest" required>
         <option value="" disabled selected>Product of interest</option>
-        <option value="Jaggery Cubes">Jaggery Cubes</option>
-        <option value="Jaggery Powder">Jaggery Powder</option>
-        <option value="Mustard Oil">Mustard Oil</option>
-        <option value="Multiple Products">Multiple Products</option>
+        <option>Jaggery Cubes</option>
+        <option>Jaggery Powder</option>
+        <option>Mustard Oil</option>
+        <option>Multiple Products</option>
       </select>
-      <input type="text" id="destinationPort" placeholder="Country / destination port">
+      <input type="text" name="Destination Port" placeholder="Country / destination port">
     </div>
     
-    <input type="text" id="approxQuantity" placeholder="Approximate quantity (e.g. 500 kg / month, 1 container)">
-    <textarea id="reqDetails" placeholder="Tell us more about your requirement..."></textarea>
+    <input type="text" name="Approximate Quantity" placeholder="Approximate quantity (e.g. 500 kg / month, 1 container)">
+    <textarea name="Requirement Details" placeholder="Tell us more about your requirement..."></textarea>
     
-    <button type="submit" class="btn btn-primary" style="justify-self:start;">Send Enquiry via WhatsApp →</button>
+    <button type="submit" class="btn btn-primary" style="justify-self:start;">Send Enquiry →</button>
 </form>
+
 
 <script>
 function sendToWhatsApp(event) {
