@@ -945,8 +945,12 @@
 <!-- === YAHAN SE COPY KAREIN === -->
 <form action="https://web3forms.com" method="POST">
     
-    <!-- Aapki Gmail se bani hui Active Access Key -->
+    <!-- Yeh key aapki website ko active rakhegi -->
     <input type="hidden" name="access_key" value="3518ac79-fd0f-4f3a-aae5-9ddf9f1e8ab1">
+
+    <!-- Yeh line ensure karegi ki inquiry direct aapke business email par forward ho -->
+    <input type="hidden" name="replyto" value="info@bioacornsglobal.com">
+    <input type="hidden" name="to_email" value="info@bioacornsglobal.com">
 
     <!-- Email ka subject line jo aapko inbox me dikhega -->
     <input type="hidden" name="subject" value="New Website Enquiry - Bioacorns Global">
@@ -980,6 +984,7 @@
     
     <button type="submit" class="btn btn-primary" style="justify-self:start;">Send Enquiry →</button>
 </form>
+<!-- === YAHAN TAK COPY KAREIN === -->
 
 <script>
 function sendToWhatsApp(event) {
